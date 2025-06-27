@@ -150,5 +150,18 @@
             "01/16/15, 03:39 PM", 
             "VISIBLE"
         ]
-    ]
+    ],
+    "skills": [
+        "PHP", "CakePHP", "Slim", "CodeIgniter", "Laravel", "Symfony", "Angular", "Node.js", "React",
+        "WordPress", "Joomla", "HTML", "CSS", "SCSS", "JavaScript", "jQuery", "Ajax", "React Native",
+        "Stripe", "PayPal", "Authorize.Net", "Worldpay", "Bambora", "Braintree", "Twilio", "Nexmo", "Clickatell",
+        "MySQL", "Salesforce", "Pardot", "GA4", "Custom APIs", "GitHub", "Bitbucket", "Trello", "Slack", "Zoom", "Asana", "Monday",
+        "SEO/SMO", "Responsive Design", "N8N", "RAG", "Scikit-learn"
+    ],
+    "contact": {
+        "email": "devendrasinghbhandari@example.com",
+        "linkedin": "https://www.linkedin.com/in/devendrasinghbhandari/",
+        "github": "https://github.com/devendrabhandari",
+        "stackoverflow": "http://stackoverflow.com/users/2129098/devendra-bhandari"
+    }
 }
