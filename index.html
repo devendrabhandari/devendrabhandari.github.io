@@ -1,129 +1,202 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devendra Singh Bhandari</title>
+    <title>Devendra Singh Bhandari | Senior Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            color: #333;
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #ffffff;
+            color: #343a40;
+            line-height: 1.8;
         }
-        .jumbotron {
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            font-weight: 700;
+        }
+        .header {
+            padding: 8rem 0 6rem 0;
             background-color: #f8f9fa;
-            border-bottom: 1px solid #dee2e6;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .header .lead {
+            font-size: 1.5rem;
+            color: #6c757d;
+            font-weight: 400;
+        }
+        .section {
+            padding: 5rem 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 2.5rem;
         }
         .card {
-            margin-bottom: 20px;
-            border: none;
-            box-shadow: 0 0 1.25rem rgba(0,0,0,0.1);
+            border: 1px solid #e9ecef;
+            border-radius: 0.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        h2 {
-            border-bottom: 2px solid #0d6efd;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
         }
         .skill-badge {
-            background-color: #e9ecef;
-            color: #212529;
-            padding: 0.5em 0.9em;
-            border-radius: 0.25rem;
+            background-color: #f1f3f5;
+            color: #495057;
+            padding: 0.6em 1em;
+            border-radius: 15px;
             margin: 0.25rem;
+            font-size: 0.9rem;
+            font-weight: 600;
             display: inline-block;
         }
-        #contact i {
-            font-size: 1.5rem;
-            margin-right: 10px;
+        .contact-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+            vertical-align: middle;
+            color: #0d6efd;
+        }
+        .contact-link {
+            font-size: 1.1rem;
+            color: #343a40;
+            text-decoration: none;
+        }
+        .contact-link:hover {
+            color: #0d6efd;
+            text-decoration: underline;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 2rem 0;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="container py-5">
-        <div class="jumbotron p-5 mb-4 rounded-3 text-center">
-            <h1 class="display-4" id="name"></h1>
+
+    <header class="header">
+        <div class="container">
+            <h1 id="name"></h1>
             <p class="lead" id="headline"></p>
         </div>
+    </header>
 
-        <div class="row">
-            <div class="col-lg-8">
-                <div id="summary-section" class="mb-5">
-                    <h2>About Me</h2>
-                    <p id="summary"></p>
-                </div>
-
-                <div id="recommendations" class="mb-5">
-                    <h2>Recommendations</h2>
-                    <div class="row" id="recommendations-list">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div id="skills-section" class="mb-5">
-                    <h2>Skills</h2>
-                    <div id="skills-list"></div>
-                </div>
-
-                <div id="contact-section">
-                    <h2>Contact</h2>
-                    <div id="contact-list"></div>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="lead" id="summary"></p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="text-center" id="skills-list">
+            </div>
+        </div>
+    </section>
+
+    <section id="recommendations" class="section">
+        <div class="container">
+            <h2 class="section-title">Recommendations</h2>
+            <div class="row" id="recommendations-list"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row justify-content-center text-center" id="contact-list">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Devendra Singh Bhandari. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script>
-        fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('name').textContent = data.first_name + ' ' + data.last_name;
-                document.getElementById('headline').textContent = data.headline;
-                document.getElementById('summary').textContent = data.summary;
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('name').textContent = data.first_name + ' ' + data.last_name;
+                    document.getElementById('headline').textContent = data.headline;
+                    document.getElementById('summary').textContent = data.summary;
 
-                const recommendationsList = document.getElementById('recommendations-list');
-                data.recommendations_received.forEach(rec => {
-                    const col = document.createElement('div');
-                    col.classList.add('col-md-12');
+                    const skillsList = document.getElementById('skills-list');
+                    if (data.skills && skillsList) {
+                        data.skills.forEach(skill => {
+                            const badge = document.createElement('span');
+                            badge.className = 'skill-badge';
+                            badge.textContent = skill;
+                            skillsList.appendChild(badge);
+                        });
+                    }
 
-                    const card = document.createElement('div');
-                    card.classList.add('card', 'mb-3');
+                    const recommendationsList = document.getElementById('recommendations-list');
+                    if(data.recommendations_received && recommendationsList) {
+                        data.recommendations_received.forEach(rec => {
+                            const col = document.createElement('div');
+                            col.className = 'col-md-6 col-lg-4 mb-4';
+                            col.innerHTML = `
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <p class="card-text"><em>\"${rec[4]}\"</em></p>
+                                        <footer class="blockquote-footer text-end mt-3">${rec[0]} ${rec[1]}</footer>
+                                        <cite class="d-block text-end text-muted">${rec[3]} at ${rec[2]}</cite>
+                                    </div>
+                                </div>
+                            `;
+                            recommendationsList.appendChild(col);
+                        });
+                    }
 
-                    const cardBody = document.createElement('div');
-                    cardBody.classList.add('card-body');
-
-                    const text = document.createElement('p');
-                    text.classList.add('card-text');
-                    text.textContent = '"' + rec[4] + '"';
-
-                    const footer = document.createElement('footer');
-                    footer.classList.add('blockquote-footer');
-                    footer.innerHTML = `${rec[0]} ${rec[1]}, <cite title="Source Title">${rec[3]} at ${rec[2]}</cite>`;
-
-                    cardBody.appendChild(text);
-                    cardBody.appendChild(footer);
-                    card.appendChild(cardBody);
-                    col.appendChild(card);
-                    recommendationsList.appendChild(col);
+                    const contactList = document.getElementById('contact-list');
+                    if (data.contact && contactList) {
+                        contactList.innerHTML = `
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <a href="mailto:${data.contact.email}" class="contact-link"><i class="bi bi-envelope-fill contact-icon"></i>Email</a>
+                            </div>
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <a href="${data.contact.linkedin}" target="_blank" class="contact-link"><i class="bi bi-linkedin contact-icon"></i>LinkedIn</a>
+                            </div>
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <a href="${data.contact.github}" target="_blank" class="contact-link"><i class="bi bi-github contact-icon"></i>GitHub</a>
+                            </div>
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <a href="${data.contact.stackoverflow}" target="_blank" class="contact-link"><i class="bi bi-stack-overflow contact-icon"></i>Stack Overflow</a>
+                            </div>
+                        `;
+                    }
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
                 });
-
-                const skillsList = document.getElementById('skills-list');
-                data.skills.forEach(skill => {
-                    const badge = document.createElement('span');
-                    badge.classList.add('skill-badge');
-                    badge.textContent = skill;
-                    skillsList.appendChild(badge);
-                });
-
-                const contactList = document.getElementById('contact-list');
-                contactList.innerHTML = `
-                    <p><i class="bi bi-envelope-fill"></i> <a href="mailto:${data.contact.email}">${data.contact.email}</a></p>
-                    <p><i class="bi bi-linkedin"></i> <a href="${data.contact.linkedin}" target="_blank">LinkedIn</a></p>
-                    <p><i class="bi bi-github"></i> <a href="${data.contact.github}" target="_blank">GitHub</a></p>
-                    <p><i class="bi bi-stack-overflow"></i> <a href="${data.contact.stackoverflow}" target="_blank">Stack Overflow</a></p>
-                `;
-            });
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
